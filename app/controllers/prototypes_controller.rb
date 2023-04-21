@@ -4,7 +4,7 @@ class PrototypesController < ApplicationController
   end
 
   def create
-    if Prototype.create(post_params)
+    if Prototype.create(prototype_params)
       redirect_to root_path
     else
       render :new
@@ -12,8 +12,8 @@ class PrototypesController < ApplicationController
   end
 
   private
-  def post_params
-    params.require(:post).permit(:title, :catch_copy, :concept, :image).merge(user_id: current_user.id)
+  def prototype_params
+    params.require(:prototype).permit(:title, :catch_copy, :concept, :image).merge(user_id: current_user.id)
     
   end
 end
