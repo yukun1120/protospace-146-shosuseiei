@@ -1,8 +1,8 @@
 <main class="main">
   <div class="inner">
-    <% if user_signed_in? && current_user.id == prototype.user_id %>
+    <% if user_signed_in?  %>
       <div class="greeting"> 
-        <%=こんにちは、 %>
+        <%= "こんにちは、" %>
         <%= link_to current_user.name, edit_user_registration_path(current_user), class: :greeting__link%>
       </div> 
     <% end %>
