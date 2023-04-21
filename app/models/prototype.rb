@@ -6,9 +6,12 @@ class Prototype < ApplicationRecord
   has_one_attached :image
 
 
+
   validates :title, presence: true
   validates :catch_copy, presence: true
   validates :concept, presence: true
-  validates :usr_id, presence: true, foreign_key: true
+  validates :user_id, presence: true
+  validates :image, presence: true
+
 
 end
