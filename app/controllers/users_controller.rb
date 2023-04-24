@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
   def show
     user = User.find(params[:id])
-    # binding.pry
     @name = user.name
     @profile = user.profile
     @occupation = user.occupation
